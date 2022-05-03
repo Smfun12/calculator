@@ -4,22 +4,22 @@ pipeline {
         choice(
             choices: ['maven' , 'gradle'],
             description: '',
-            name: 'tool-id')
+            name: 'tool_id')
     }
 
     stages {
         stage ('maven_build') {
             when {
                 
-                expression { params.tool-id == 'maven' }
+                expression { params.tool_id == 'maven' }
             }
             steps {
-                mvn install
+                sh './mvn install'
             }
         }
 	stage ('gradle_build'){
 		when {
-		expression {params.tool-id == 'gradle'}	
+		expression {params.tool_id == 'gradle'}	
 		}
 		steps{
 		sh 'chmod +x ./gradlew'
