@@ -14,7 +14,7 @@ pipeline {
                 expression { params.tool_id == 'maven' }
             }
             steps {
-                sh './mvn install'
+                sh './mvnw package'
             }
         }
 	stage ('gradle_build'){
