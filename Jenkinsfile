@@ -22,8 +22,8 @@ pipeline {
 		expression {params.tool-id == 'gradle'}	
 		}
 		steps{
-		chmod +x ./gradlew
-		./gradlew build
+		sh 'chmod +x ./gradlew'
+		sh '/gradlew build'
 		}
 	}
     }
