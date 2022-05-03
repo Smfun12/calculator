@@ -16,3 +16,5 @@ jar{
 		attributes 'Main-Class': 'com.linkedinlearning.calculator.Main'
 	}
 }
+
+
